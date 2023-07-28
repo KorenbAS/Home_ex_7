@@ -67,14 +67,9 @@ def main(folder: Path):
 
 
 def start():
-    if sys.argv[1]:
+    if len(sys.argv) == 1:
         folder_for_scan = Path(sys.argv[1])
         print(f'Start in folder {folder_for_scan.resolve()}')
         main(folder_for_scan.resolve())
 
-if __name__ == "__main__":
-    if sys.argv[1]:
-        folder_for_scan = Path(sys.argv[1])
-        print(f'Start in folder: {folder_for_scan.resolve()}')
-        main(folder_for_scan.resolve())
 
